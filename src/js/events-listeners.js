@@ -1,6 +1,6 @@
-import { refs } from "./refs";
+import { configRefs } from "./refs";
 
 export default function eventsListeners() {
-	refs.storageRange.addEventListener("input", () => (refs.storageValue.textContent = `${refs.storageRange.value} GB`));
-	refs.transferRange.addEventListener("input", () => (refs.transferValue.textContent = `${refs.transferRange.value} GB`));
+	configRefs.storageRange.addEventListener("input", () => (configRefs.storageValue.textContent = `${configRefs.storageRange.value} GB`));
+	configRefs.transferRange.addEventListener("input", () => (configRefs.transferValue.textContent = `${configRefs.transferRange.value} GB`));
 }

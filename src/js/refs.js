@@ -1,4 +1,4 @@
-export const refs = {
+export const configRefs = {
 	storageValue: document.querySelector("#storage-value"),
 	storageRange: document.querySelector("#storage-range"),
 	transferValue: document.querySelector("#transfer-value"),
