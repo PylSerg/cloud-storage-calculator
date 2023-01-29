@@ -6,30 +6,22 @@ import vultrIcon from "../asset/images/vultr_icon.png";
 export const providers = [
 	{
 		name: "backblaze",
-		icon: backblazeIcon,
 		alt: "backblaze.com",
-		valueId: "backblaze-value",
-		priceId: "backblaze-price",
+		icon: backblazeIcon,
 	},
 	{
 		name: "bunny",
-		icon: bunnyIcon,
 		alt: "bunny.net",
-		valueId: "bunny-value",
-		priceId: "bunny-price",
+		icon: bunnyIcon,
 	},
 	{
 		name: "scaleway",
-		icon: scalewayIcon,
 		alt: "scaleway.com",
-		valueId: "scaleway-value",
-		priceId: "scaleway-price",
+		icon: scalewayIcon,
 	},
 	{
 		name: "vultr",
-		icon: vultrIcon,
 		alt: "vultr.com",
-		valueId: "vultr-value",
-		priceId: "vultr-price",
+		icon: vultrIcon,
 	},
 ];
