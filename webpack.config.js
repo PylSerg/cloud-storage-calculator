@@ -36,6 +36,10 @@ const config = {
 				use: ["babel-loader"],
 			},
 			{
+				test: /\.html$/i,
+				use: "html-loader",
+			},
+			{
 				test: /\.css$/i,
 				use: [stylesHandler, "css-loader"],
 			},
@@ -44,7 +48,11 @@ const config = {
 				use: [stylesHandler, "css-loader", "sass-loader"],
 			},
 			{
-				test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+				test: /\.(eot|svg|ttf|woff|woff2)$/i,
+				type: "./src/asset",
+			},
+			{
+				test: /\.(jpg|png|svg|jpeg|gif)$/i,
 				type: "asset",
 			},
 
