@@ -8,14 +8,24 @@
 </head>
 
 <body>
-	<div>
-		<p>Storage:</p>
-		<p>100 GB</p>
-		<input id="storage-range" type="range" value="10" />
+	<div class="config">
+		<div class="config__type">
+			<div class="config__title">
+				<p>Storage:</p>
+				<p class="config__value" id="storage-value"></p>
+			</div>
 
-		<p>Transfer:</p>
-		<p>400 GB</p>
-		<input id="transfer-range" type="range" />
+			<input class="config__range" id="storage-range" type="range" min="0" max="1000" step="1" value="100" />
+		</div>
+
+		<div class="config__type">
+			<div class="config__title">
+				<p>Transfer:</p>
+				<p class="config__value" id="transfer-value"></p>
+			</div>
+
+			<input class="config__range" id="transfer-range" type="range" min="0" max="1000" step="1" value="400" />
+		</div>
 	</div>
 </body>
 
