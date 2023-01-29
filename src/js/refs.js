@@ -4,3 +4,7 @@ export const configRefs = {
 	transferValue: document.querySelector("#transfer-value"),
 	transferRange: document.querySelector("#transfer-range"),
 };
+
+export const resultRefs = {
+	resultBlock: document.querySelector(".result__block"),
+};
