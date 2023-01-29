@@ -12,8 +12,8 @@ export default function Result() {
 				<img class="result__icon" src=${provider.icon} alt=${provider.alt} width="16" />
 			</div>
 
-			<div class="result__value" id=${provider.value}></div>
-			<span class="result__price" id=${provider.price}></span>
+			<div class="result__value" id=${provider.valueId}></div>
+			<span class="result__price" id=${provider.priceId}></span>
 		</li>
 		
 		`;
