@@ -9,30 +9,5 @@ p {
     padding: 0;
 }
 
-.config {
-    display: flex;
-    flex-direction: row;
-}
-
-.config__type {
-    &:not(:last-child) {
-        margin-right: 100px;
-    }
-}
-
-.config__title {
-    display: flex;
-    flex-direction: row;
-}
-
-.config__value {
-    margin-left: 10px;
-
-    font-weight: 700;
-}
-
-.config__range {
-    width: 500px;
-
-    margin-top: 20px;
-}
+@import "./components/config-block";
+@import "./components/price-block"
