@@ -9,6 +9,12 @@ p {
     padding: 0;
 }
 
+.page {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
 @import "./components/config-block";
 @import "./components/result-block";
 @import "./components/_providers-value";
