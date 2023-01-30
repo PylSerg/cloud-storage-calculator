@@ -1,5 +1,7 @@
 .vscode
+.netlify
 .prettierrc.json
+
 
 # Node modules
 node_modules

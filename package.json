@@ -8,7 +8,9 @@
 		"build:dev": "webpack --mode=development",
 		"build:prod": "webpack --mode=production --node-env=production",
 		"watch": "webpack --watch",
-		"start": "webpack serve"
+		"start": "webpack serve",
+		"predeploy": "npm run build",
+		"deploy": "netlify deploy -p"
 	},
 	"keywords": [],
 	"author": "",
@@ -22,6 +24,7 @@
 		"html-loader": "^4.2.0",
 		"html-webpack-plugin": "^5.5.0",
 		"mini-css-extract-plugin": "^2.7.2",
+		"netlify-cli": "^12.10.0",
 		"prettier": "^2.8.3",
 		"sass": "^1.57.1",
 		"sass-loader": "^13.2.0",
