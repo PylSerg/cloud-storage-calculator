@@ -31,7 +31,7 @@ function calcTotalPriceBackblaze() {
 
 	if (backblazeTotalPrice < prices.backblaze.minPayment) backblazeTotalPrice = prices.backblaze.minPayment;
 
-	totalPrice = { ...totalPrice, backblaze: backblazeTotalPrice.toFixed(2) };
+	totalPrice = { ...totalPrice, backblaze: Number(backblazeTotalPrice.toFixed(2)) };
 }
 
 // bunny
@@ -48,7 +48,7 @@ function calcTotalPriceBunny() {
 
 	if (bunnyTotalPrice > prices.bunny.maxPayment) bunnyTotalPrice = prices.bunny.maxPayment;
 
-	totalPrice = { ...totalPrice, bunny: bunnyTotalPrice.toFixed(2) };
+	totalPrice = { ...totalPrice, bunny: Number(bunnyTotalPrice.toFixed(2)) };
 }
 
 // scaleway
@@ -84,7 +84,7 @@ function calcTotalPriceScaleway() {
 
 	const scalewayTotalPrice = scalewayStorage + scalewayTransfer;
 
-	totalPrice = { ...totalPrice, scaleway: scalewayTotalPrice.toFixed(2) };
+	totalPrice = { ...totalPrice, scaleway: Number(scalewayTotalPrice.toFixed(2)) };
 }
 
 // vultr
@@ -96,5 +96,5 @@ function calcTotalPriceVultr() {
 
 	if (vultrTotalPrice < prices.vultr.minPayment) vultrTotalPrice = prices.vultr.minPayment;
 
-	totalPrice = { ...totalPrice, vultr: vultrTotalPrice.toFixed(2) };
+	totalPrice = { ...totalPrice, vultr: Number(vultrTotalPrice.toFixed(2)) };
 }
