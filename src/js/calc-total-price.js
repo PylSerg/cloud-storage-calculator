@@ -10,6 +10,20 @@ export let totalPrice = {
 
 export function calcTotalPrice() {
 	// backblaze
+	calcTotalPriceBackblaze();
+
+	// bunny
+	calcTotalPriceBunny();
+
+	// scaleway
+	calcTotalPriceScaleway();
+
+	// vultr
+	calcTotalPriceVultr();
+}
+
+// backblaze
+function calcTotalPriceBackblaze() {
 	const backblazeStorage = configRefs.storageRange.value * prices.backblaze.storage;
 	const backblazeTransfer = configRefs.transferRange.value * prices.backblaze.transfer;
 
@@ -18,8 +32,10 @@ export function calcTotalPrice() {
 	if (backblazeTotalPrice < prices.backblaze.minPayment) backblazeTotalPrice = prices.backblaze.minPayment;
 
 	totalPrice = { ...totalPrice, backblaze: backblazeTotalPrice.toFixed(2) };
+}
 
-	// bunny
+// bunny
+function calcTotalPriceBunny() {
 	let bunnyPriceStorage = 0;
 
 	if (resultRefs.bunnyHDD.checked) bunnyPriceStorage = prices.bunny.storage.HDD;
@@ -33,8 +49,10 @@ export function calcTotalPrice() {
 	if (bunnyTotalPrice > prices.bunny.maxPayment) bunnyTotalPrice = prices.bunny.maxPayment;
 
 	totalPrice = { ...totalPrice, bunny: bunnyTotalPrice.toFixed(2) };
+}
 
-	// scaleway
+// scaleway
+function calcTotalPriceScaleway() {
 	let scalewayPriceStorage = 0;
 
 	if (resultRefs.scalewayMulti.checked) {
@@ -67,8 +85,10 @@ export function calcTotalPrice() {
 	const scalewayTotalPrice = scalewayStorage + scalewayTransfer;
 
 	totalPrice = { ...totalPrice, scaleway: scalewayTotalPrice.toFixed(2) };
+}
 
-	// vultr
+// vultr
+function calcTotalPriceVultr() {
 	const vultrStorage = configRefs.storageRange.value * prices.vultr.storage;
 	const vultrTransfer = configRefs.transferRange.value * prices.vultr.transfer;
 
