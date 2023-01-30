@@ -1,7 +1,5 @@
 .vscode
-.netlify
 .prettierrc.json
-
 build
 
 
@@ -10,3 +8,7 @@ node_modules
 
 # Node.js version
 .ndv
+
+# Netlify
+.netlify
+netlify.toml
