@@ -6,8 +6,36 @@
 .result__position {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.result__provider-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 150px;
+    height: 70px;
+
+    padding-right: 10px;
+
+    border-right: 5px solid #000;
 }
 
 .result__provider {
     margin-right: 5px;
+
+    font-size: 20px;
+}
+
+.result__icon {
+    display: block;
+
+    width: 40px;
+    height: 40px;
+}
+
+.result__value {
+    border-radius: 0 5px 5px 0;
 }
