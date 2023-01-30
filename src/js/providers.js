@@ -13,11 +13,31 @@ export const providers = [
 		name: "bunny",
 		alt: "bunny.net",
 		icon: bunnyIcon,
+		options: [
+			{
+				name: "HDD",
+				checked: "checked",
+			},
+			{
+				name: "SSD",
+				checked: "",
+			},
+		],
 	},
 	{
 		name: "scaleway",
 		alt: "scaleway.com",
 		icon: scalewayIcon,
+		options: [
+			{
+				name: "Multi",
+				checked: "",
+			},
+			{
+				name: "Single",
+				checked: "checked",
+			},
+		],
 	},
 	{
 		name: "vultr",

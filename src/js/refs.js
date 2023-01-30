@@ -15,6 +15,10 @@ export function createRefs() {
 
 	resultRefs = {
 		resultBlock: document.querySelector(".result__block"),
+		bunnyHDD: document.querySelector("#bunny-hdd"),
+		bunnySSD: document.querySelector("#bunny-ssd"),
+		scalewayMulti: document.querySelector("#scaleway-multi"),
+		scalewaySingle: document.querySelector("#scaleway-single"),
 	};
 
 	providersValueRefs = {
