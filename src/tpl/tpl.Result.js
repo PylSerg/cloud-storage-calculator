@@ -7,8 +7,8 @@ export default function Result() {
 		result += `
 
 			<div class="result__position">
-				<div class="result__provider-block">
-					<div>
+				<div class="result__provider-section">
+					<div class="result__provider-block">
 						<snap class="result__provider">${name}</snap>
 
 		`;

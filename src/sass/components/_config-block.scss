@@ -7,13 +7,15 @@
 
     margin-top: 50px;
 
+    transition: all 250ms linear;
+
     @media screen and (max-width: 1199px) {
         justify-content: center;
     }
 }
 
 .config__type {
-    max-width: 100%;
+    max-width: 90%;
 
     padding: 20px;
 
@@ -37,4 +39,6 @@
     max-width: 100%;
 
     margin-top: 20px;
+
+    cursor: pointer;
 }

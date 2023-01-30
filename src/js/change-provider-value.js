@@ -2,24 +2,22 @@ import { providersValueRefs } from "./refs";
 import { calcTotalPrice, totalPrice } from "./calc-total-price";
 
 export default function changeProviderValue() {
-	const coefficient = 10;
+	const coefficient = 0.5;
 
 	calcTotalPrice();
 
-	console.table(`totalPrice`, totalPrice);
-
 	// backblaze
-	providersValueRefs.backblaze.style.width = `${totalPrice.backblaze * coefficient}px`;
-
 	if (totalPrice.backblaze <= totalPrice.bunny && totalPrice.backblaze <= totalPrice.scaleway && totalPrice.backblaze <= totalPrice.vultr) {
 		providersValueRefs.backblaze.style.backgroundColor = "#c92626";
 	} else {
 		providersValueRefs.backblaze.style.backgroundColor = "#aaa";
 	}
 
+	providersValueRefs.backblaze.style.width = `${totalPrice.backblaze * coefficient}%`;
+
 	// bunny
 	if (totalPrice.bunny !== 0) {
-		providersValueRefs.bunny.style.width = `${totalPrice.bunny * coefficient}px`;
+		providersValueRefs.bunny.style.width = `${totalPrice.bunny * coefficient}%`;
 	} else {
 		providersValueRefs.bunny.style.width = `3px`;
 	}
@@ -32,7 +30,7 @@ export default function changeProviderValue() {
 
 	// scaleway
 	if (totalPrice.scaleway !== 0) {
-		providersValueRefs.scaleway.style.width = `${totalPrice.scaleway * coefficient}px`;
+		providersValueRefs.scaleway.style.width = `${totalPrice.scaleway * coefficient}%`;
 	} else {
 		providersValueRefs.scaleway.style.width = `3px`;
 	}
@@ -44,11 +42,11 @@ export default function changeProviderValue() {
 	}
 
 	// vultr
-	providersValueRefs.vultr.style.width = `${totalPrice.vultr * coefficient}px`;
-
 	if (totalPrice.vultr <= totalPrice.backblaze && totalPrice.vultr <= totalPrice.bunny && totalPrice.vultr <= totalPrice.scaleway) {
 		providersValueRefs.vultr.style.backgroundColor = "#1149e2";
 	} else {
 		providersValueRefs.vultr.style.backgroundColor = "#aaa";
 	}
+
+	providersValueRefs.vultr.style.width = `${totalPrice.vultr * coefficient}%`;
 }
