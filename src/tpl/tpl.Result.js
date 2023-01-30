@@ -14,13 +14,13 @@ export default function Result() {
 		`;
 
 		if (options) {
-			result += `<div>`;
+			result += `<div class="result__options-block">`;
 
 			options.map(option => {
 				result += `
 				
-				<input type="radio" id="${name}-${option.name.toLocaleLowerCase()}" name="${name}" value="${option.name}" ${option.checked}>
-				<label for="${name}-${option.name.toLocaleLowerCase()}">${option.name}</label>
+				<input  class="result__option-radio" type="radio" id="${name}-${option.name.toLocaleLowerCase()}" name="${name}" value="${option.name}" ${option.checked}>
+				<label class="result__option-name" for="${name}-${option.name.toLocaleLowerCase()}">${option.name}</label>
 				
 				`;
 			});
