@@ -1,5 +1,7 @@
 export let configRefs = { configBlock: document.querySelector(".config__block") };
 export let resultRefs = { resultBlock: document.querySelector(".result__block") };
+export let providersValueRefs = {};
+export let providersPriceRefs = {};
 
 // Creates refs
 export function createRefs() {
@@ -13,5 +15,19 @@ export function createRefs() {
 
 	resultRefs = {
 		resultBlock: document.querySelector(".result__block"),
+	};
+
+	providersValueRefs = {
+		backblaze: document.querySelector("#backblaze-value"),
+		bunny: document.querySelector("#bunny-value"),
+		scaleway: document.querySelector("#scaleway-value"),
+		vultr: document.querySelector("#vultr-value"),
+	};
+
+	providersPriceRefs = {
+		backblaze: document.querySelector("#backblaze-price"),
+		bunny: document.querySelector("#bunny-price"),
+		scaleway: document.querySelector("#scaleway-price"),
+		vultr: document.querySelector("#vultr-price"),
 	};
 }
