@@ -2,6 +2,8 @@
 .netlify
 .prettierrc.json
 
+build
+
 
 # Node modules
 node_modules
